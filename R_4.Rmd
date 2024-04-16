@@ -1,0 +1,29 @@
+print_greeting <- function(name) {
+  print(paste("Hello", name))
+}
+
+get_greeting <- function(name) {
+  return(paste("Hello", name))
+}
+
+multiply <- function(x, y) {
+  return(x * y)
+}
+
+count_numbers <- function(x) {
+  counts <- table(x)
+  return(counts)
+}
+
+categorize_age <- function(age) {
+  if (age < 18) {
+    return("Child")
+  } else if (age >= 18 & age <= 64) {
+    return("Adult")
+  } else {
+    return("Senior")
+  }
+}
+
+average_salary_by_age_group <- function(df) {
+  df$AgeGroup <- ifelse(df$Age < 30, "Young", ifelse(df$Age >= 30 & df$

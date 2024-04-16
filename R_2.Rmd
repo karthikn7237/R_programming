@@ -1,0 +1,15 @@
+df_students <- data.frame(
+  ID = 1:5,
+  Name = c("John", "Alice", "Bob", "Emma", "Tom"),
+  Age = c(20, 18, 19, 17, 21),
+  Grade = c(70, 55, 80, 45, 90)
+)
+df_students$Passed <- df_students$Grade >= 60
+print(df_students[df_students$Age >= 18, ])
+
+merged_df <- merge(df_A, df_B, by = "ID")
+
+df_sales$total_sales <- df_sales$Quantity * df_sales$Price
+
+avg_sepal_length <- tapply(iris$Sepal.Length, iris$Species, mean)
+iris$Sepal.Area <- iris$Sepal.Length * iris$Sepal.Wi

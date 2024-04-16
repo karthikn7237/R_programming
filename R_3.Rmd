@@ -1,0 +1,10 @@
+subset(mtcars, mpg > 20 & cyl == 6)
+mtcars <- mtcars[order(mtcars$cyl, -mtcars$wt), ]
+selected_columns <- mtcars[, c("mpg", "hp")]
+distinct_gear <- unique(mtcars$gear)
+mtcars$Performance <- mtcars$hp / mtcars$wt
+library(dplyr)
+mean_mpg <- mean(mtcars$mpg)
+mean_hp_cyl6 <- mtcars %>%
+  filter(cyl == 6) %>%
+  summarise(mean_hp = mean(hp))

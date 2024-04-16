@@ -1,0 +1,9 @@
+B <- matrix(c(1, 2, 3, 4), nrow = 2)
+C <- matrix(c(2, 0, 1, 2), nrow = 2)
+A <- matrix(1:9, nrow = 3)
+
+B_plus_C <- B + C
+B_times_C <- B %*% C
+row_sums_A <- rowSums(A)
+col_means_A <- colMeans(A)
+A[A %% 2 == 0] <- 0

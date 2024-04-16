@@ -1,0 +1,25 @@
+stock.prices <- c(23, 27, 23, 21, 34)
+numbers <- 1:10
+sum_numbers <- sum(numbers)
+even_numbers <- numbers %% 2 == 0
+plot(mtcars$hp, mtcars$mpg, xlab = "Horsepower", ylab = "Miles per Gallon", main = "Scatter plot of mpg vs hp")
+a <- c("a", "b", "c", "d", "e")
+second_fourth <- a[c(2, 4)]
+selected_data <- mtcars[mtcars$cyl == 4, c("mpg", "hp", "wt")]
+my_list <- list(numeric_vector = c(1, 2, 3), character_vector = c("a", "b", "c"), matrix = matrix(1:4, nrow = 2), logical_vector = c(TRUE, FALSE))
+words <- c("R", "is", "fun")
+concatenated_string <- paste(words, collapse = " ")
+replaced_string <- gsub("fun", "awesome", concatenated_string)
+v_num <- c(1, 2, 3)
+v_num_as_char <- as.character(v_num)
+v_char <- c("low", "medium", "high")
+v_factor <- as.factor(v_char)
+f <- factor(c(1, 2, 3))
+f_as_numeric <- as.numeric(levels(f))[f]
+colors <- c("red", "blue", "green", "blue", "red", "green", "green", "red")
+f_colors <- as.factor(colors)
+levels(f_colors)
+f_colors <- factor(f_colors, levels = c("green", "blue", "red"))
+print(my_list$hobbies)
+my_df <- data.frame(Name = c("Alice", "Bob"), Age = c(25, 30))
+my_df$Occupation <- ifelse(my_df$Name == "Alice", "Doctor", "Engineer")
